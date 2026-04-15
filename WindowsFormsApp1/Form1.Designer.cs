@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Browse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.FirstNameBox = new System.Windows.Forms.TextBox();
@@ -48,18 +47,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.Save = new System.Windows.Forms.Button();
             this.YearBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BirthDateBox = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Browse
             // 
-            this.Browse.Location = new System.Drawing.Point(103, 279);
+            this.Browse.Location = new System.Drawing.Point(103, 267);
             this.Browse.Name = "Browse";
-            this.Browse.Size = new System.Drawing.Size(75, 23);
+            this.Browse.Size = new System.Drawing.Size(100, 46);
             this.Browse.TabIndex = 0;
             this.Browse.Text = "Browse";
             this.Browse.UseVisualStyleBackColor = true;
@@ -212,9 +207,9 @@
             // 
             // Save
             // 
-            this.Save.Location = new System.Drawing.Point(396, 279);
+            this.Save.Location = new System.Drawing.Point(290, 267);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(75, 23);
+            this.Save.Size = new System.Drawing.Size(95, 46);
             this.Save.TabIndex = 23;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
@@ -227,24 +222,6 @@
             this.YearBox.Size = new System.Drawing.Size(100, 20);
             this.YearBox.TabIndex = 24;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(236, 54);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(179, 137);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            // 
             // BirthDateBox
             // 
             this.BirthDateBox.Location = new System.Drawing.Point(103, 132);
@@ -256,10 +233,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.tile;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BirthDateBox);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.YearBox);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.label10);
@@ -279,11 +255,10 @@
             this.Controls.Add(this.FirstNameBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Browse);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DoubleBuffered = true;
             this.Name = "Form1";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,8 +285,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.TextBox YearBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DateTimePicker BirthDateBox;
     }
 }

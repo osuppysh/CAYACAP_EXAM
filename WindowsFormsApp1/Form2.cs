@@ -12,12 +12,12 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-        public Form2(BindingList<Student> incomingList)
+        public Form2()
         {
             InitializeComponent();
 
 
-            dataGridView1.DataSource = incomingList;
+            dataGridView1.DataSource = Form1.studentList;
 
             // hide image para limpyo
             if (dataGridView1.Columns["ImagePath"] != null)
@@ -35,12 +35,18 @@ namespace WindowsFormsApp1
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ShowStudentDetails(object sender, DataGridViewCellEventArgs e)
         {
-
+            // so user cant click header
+            if (e.RowIndex >= 0)
+            {
+                Student selectedStudent = (Student)dataGridView1.Rows[e.RowIndex].DataBoundItem;
+                Form3 details = new Form3(selectedStudent);
+                details.Show();
+            }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }

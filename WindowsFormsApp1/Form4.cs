@@ -27,5 +27,16 @@ namespace WindowsFormsApp1
             Form1 StudentAdd = new Form1();
             StudentAdd.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 StudentList = new Form2();
+            StudentList.Show();
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
